@@ -54,6 +54,8 @@ public class PacketEmote implements IMessage, IMessageHandler<PacketEmote, IMess
 		if(player != null) {
 			if(message.emoteName.equals("list"))
 				player.addChatComponentMessage(new ChatComponentText(EmoteHandler.buildEmoteListStr()));
+            else if(message.emoteName.equals("stop"))
+                EmoteHandler.stopEmote(player);
 			else EmoteHandler.putEmote(player, message.emoteName);
 		}
 		

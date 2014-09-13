@@ -32,7 +32,13 @@ public final class EmoteHandler {
 			e.printStackTrace();
 		}
 	}
-	
+
+    public static void stopEmote(EntityPlayer player) {
+        if (playerEmotes.containsKey(player)) {
+            playerEmotes.get(player).stop();
+        }
+    }
+
 	public static void updateEmotes(Entity e) {
 		if(e instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) e;

@@ -41,7 +41,11 @@ public abstract class EmoteBase {
 		emoteManager.update(ClientProxy.delta);
 		state.save(model);
 	}
-	
+
+    public void stop() {
+        done = true;
+    }
+
 	public boolean isDone() {
 		return done;
 	}

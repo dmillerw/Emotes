@@ -1,17 +1,17 @@
 package vazkii.emotes.common.network;
 
-import cpw.mods.fml.common.network.simpleimpl.IMessage;
-import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
-import cpw.mods.fml.common.network.simpleimpl.MessageContext;
+import java.io.IOException;
+
+import vazkii.emotes.client.emote.base.EmoteHandler;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
-import vazkii.emotes.client.emote.base.EmoteHandler;
-
-import java.io.IOException;
+import cpw.mods.fml.common.network.simpleimpl.IMessage;
+import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
+import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 
 public class PacketEmote implements IMessage, IMessageHandler<PacketEmote, IMessage> {
 

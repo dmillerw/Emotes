@@ -1,12 +1,13 @@
 package vazkii.emotes.common;
 
-import net.minecraft.command.CommandBase;
-import net.minecraft.command.ICommandSender;
-import net.minecraft.entity.player.EntityPlayer;
 import vazkii.emotes.client.emote.base.EmoteHandler;
 import vazkii.emotes.common.network.PacketEmote;
 import vazkii.emotes.common.network.PacketHandler;
-
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.CommandException;
+import net.minecraft.command.ICommandSender;
+import net.minecraft.command.WrongUsageException;
+import net.minecraft.entity.player.EntityPlayer;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,5 +1,9 @@
 package vazkii.emotes.client.emote.base;
 
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.WeakHashMap;
+
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.entity.RenderPlayer;
@@ -8,10 +12,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
-
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.WeakHashMap;
 
 public final class EmoteHandler {
 

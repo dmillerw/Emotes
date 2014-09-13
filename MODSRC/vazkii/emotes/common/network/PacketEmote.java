@@ -1,17 +1,17 @@
 package vazkii.emotes.common.network;
 
-import java.io.IOException;
-
-import vazkii.emotes.client.emote.base.EmoteHandler;
+import cpw.mods.fml.common.network.simpleimpl.IMessage;
+import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
+import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
-import cpw.mods.fml.common.network.simpleimpl.IMessage;
-import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
-import cpw.mods.fml.common.network.simpleimpl.MessageContext;
+import vazkii.emotes.client.emote.base.EmoteHandler;
+
+import java.io.IOException;
 
 public class PacketEmote implements IMessage, IMessageHandler<PacketEmote, IMessage> {
 
@@ -54,6 +54,8 @@ public class PacketEmote implements IMessage, IMessageHandler<PacketEmote, IMess
 		if(player != null) {
 			if(message.emoteName.equals("list"))
 				player.addChatComponentMessage(new ChatComponentText(EmoteHandler.buildEmoteListStr()));
+            else if(message.emoteName.equals("stop"))
+                EmoteHandler.stopEmote(player);
 			else EmoteHandler.putEmote(player, message.emoteName);
 		}
 		
